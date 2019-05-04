@@ -10,9 +10,12 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
+    backgroundColor: '#FFF',
     borderBottomWidth: 1,
-    borderColor: 1,
+    borderColor: '#DDD',
+    borderRadius: 5,
+    padding: 20,
+    marginBottom: 20,
   },
   author: {
     fontSize: 16,
@@ -52,18 +55,16 @@ export default class Tweet extends Component {
   render() {
     const { tweet } = this.props;
     const { like } = this.state;
-    console.tron.log(tweet.dataAl.getDay());
     return (
       <View style={styles.container}>
         <Text style={styles.author}>{tweet.author}</Text>
         <Text style={styles.content}>{tweet.content}</Text>
-        <Text style={styles.content}>{tweet.dataAl.getDay()}</Text>
         <View style={styles.likeButton}>
           <TouchableOpacity onPress={this.handerLikes}>
             <Icon
-              name="heart"
+              name="heart-o"
               size={20}
-              style={like === true ? { color: 'red' } : { color: '#999' }}
+              style={like === true ? { color: 'red' } : { bordeColor: '#999' }}
             />
           </TouchableOpacity>
           <Text style={styles.likeText}>{tweet.likes}</Text>

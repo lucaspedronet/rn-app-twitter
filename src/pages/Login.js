@@ -98,7 +98,7 @@ export default class Login extends Component {
         <StatusBar barStyle="light-content" backgroundColor="#4bb0ee" />
         <View style={styles.iconTwitter} />
         <View style={styles.content}>
-          <Icon size={54} name="twitter" color="#4bb0ee" />
+          <Icon size={54} name="twitter" color="#38A1F3" />
 
           <TextInput
             autoCorrect={false}
